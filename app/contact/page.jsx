@@ -44,10 +44,10 @@ export default  function Contact() {
       initial={{ opacity: 1, y: 30 }}
       animate={{ opacity: 10, y: 0 }}
       transition={{ duration: 0.78, ease: 'easeIn' }}
-      className="min-h-screen flex  justify-center m-20"
+      className="min-h-screen flex justify-center m-20"
     >
       <div className='flex flex-col gap-20 justify-center items-center md:flex md:flex-row md:text-3xl'>
-      <div className="flex flex-row items-center justify-between gap-10 max-w-5xl w-full ">
+      <div className="flex flex-col md:flex-row items-center justify-between gap-10  w-full  ">
 
         <div className="w-1/2 flex justify-center">
           <Image
@@ -105,12 +105,12 @@ export default  function Contact() {
       <div >
         <form className='flex flex-col gap-5'>
           <label >Name</label>
-          <input type="name" placeholder='Enter you name' value={Name} onChange={(e) => { setName(e.target.value) }} className='bg-gray-200 text-black border-2 p-2 rounded-full' />
+          <input type="name" placeholder='Enter you name' value={Name} onChange={(e) => { setName(e.target.value) }} className='bg-gray-200 text-black border-2  rounded-full' />
           <label >Email</label>
-          <input type="email" placeholder='Enter you email' value={Email} onChange={(e) => { setEmail(e.target.value) }}className='bg-gray-200 text-black p-2 border-2 rounded-full' />
+          <input type="email" placeholder='Enter you email' value={Email} onChange={(e) => { setEmail(e.target.value) }}className='bg-gray-200 text-black border-2 rounded-full' />
           <label >Your Message</label>         
-          <input type="text" placeholder='Enter you message' value={Message} onChange={(e) => { setMessage(e.target.value) }} className='bg-gray-200 text-black border-2 rounded-full p-2'/>
-          <button onClick={Send} className='cursor-pointer bg-black  text-white rounded-full w-30 p-2'> Submit</button>
+          <input type="text" placeholder='Enter you message' value={Message} onChange={(e) => { setMessage(e.target.value) }} className='bg-gray-200 text-black border-2 rounded-full '/>
+          <button onClick={Send} className='cursor-pointer bg-black  text-white rounded-full w-full '> Submit</button>
         </form>
       </div>
 

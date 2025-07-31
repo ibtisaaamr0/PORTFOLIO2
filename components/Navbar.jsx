@@ -16,11 +16,11 @@ export default function Navbar() {
   const [Up, setUp] = useState(false)
   return (
     <>
-      <div className=' left-45 sm:left-70 text-3xl font-black italic top-1 lg:hidden  p-3 rounded-full '> 
+      <div className=' left-45 sm:left-70 text-3xl font-black italic top-1 lg:hidden  rounded-full  '>
         <h1 className='flex justify-center items-center '><Link href={"/"}
           className='cursor-pointer '>Portfolio</Link></h1></div>
       <nav className="fixed w-full z-50 lg:bg-white lg:shadow-md px-5 py-3 flex justify-between items-center rounded-full 
-                bottom-2 lg:bottom-auto lg:top-0 animate-dropup">
+                bottom-2 lg:bottom-auto lg:top-0 animate-dropup ">
 
         <div><Link href={"/"}>
           <Image src={assets.logo}
@@ -34,7 +34,7 @@ export default function Navbar() {
         <div>
           {!Up && (
 
-            <div className=' font-extrabold text-base md:text-2xl lg:text-4xl btext-white  rounded-full sm:w-640px  p-4 flex  justify-center items-center md:max-w-screen-md lg:hidden bg-linear-to-t from-gray-300 to-gray-600'
+            <div className='w-full font-extrabold text-base md:text-2xl lg:text-4xl text-white  rounded-full  p-4 flex justify-center items-center lg:hidden bg-gradient-to-t from-gray-700 to-black'
             >
               <button onClick={() => { setUp(true) }}
 
@@ -44,7 +44,7 @@ export default function Navbar() {
             </div>
           )}
 
-          <ul className=" lg:flex lg:flex-row lg:justify-between gap-10 lg:gap-60 md:gap-30 text-gray-800 font-medium bg-linear-to-b from-gray-300 to-gray-100 rounded-full py-4 md:px-10  shadow-lg shadow-r-xl hidden md:text-2xl md:font-bold">
+          <ul className=" lg:flex lg:flex-row lg:justify-between gap-10 xl:gap-60 lg:gap-20 text-gray-800 font-medium bg-linear-to-b from-gray-300 to-gray-100 rounded-full py-4 md:px-10  shadow-lg shadow-r-xl hidden md:text-2xl md:font-bold md:max-w-4xl md:gap-5">
             <li>
               <Link href={"/"}>Home</Link>
             </li>
@@ -75,26 +75,24 @@ export default function Navbar() {
       {Up &&
         (
           <div className='flex flex-col justify-center items-center lg:hidden '>
-            <ul className=" fixed flex flex-col justify-center items-center bottom-5 bg-linear-to-t from-gray-300 to-gray-600 text-white  rounded-4xl gap-10 text-base font-bold min-w-2 p-4 ">
-              <div className='flex flex-row w-full sm:min-w-[640px] justify-between'>
+            <ul className=" fixed flex flex-col justify-center items-center bottom-5 bg-gradient-to-t from-gray-700 to-black text-white max-w-sm rounded-4xl gap-10 text-base font-bold w-[90%] sm:max-w-md md:max-w-lg p-4 md:p-10">
 
-                <li className='left-0'>
-                  <Link href={"/"}
-                    onClick={() => setUp(!Up)}>
-                    <Image src={assets.logo_dark}
-                      alt=''
-                      width={50}
-                      height={20}
-                      className='cursor-pointer rounded-full md:w-17 ' /></Link>
-                </li>
-                <li>
-                  <Link href={"/contact"}
-                    onClick={() => setUp(!Up)}>
-                    <VscAccount
-                      className='cursor-pointer rounded-full md:w-17 '
-                    /></Link>
-                </li>
-              </div>
+              <li className="w-full hidden md:flex justify-between items-center">
+                <Link href={"/"} onClick={() => setUp(false)}>
+                  <Image
+                    src={assets.logo_dark}
+                    alt="logo"
+                    width={50}
+                    height={20}
+                    className="cursor-pointer rounded-full"
+                  />
+                </Link>
+
+                <Link href={"/contact"} onClick={() => setUp(false)}>
+                  <VscAccount className="cursor-pointer rounded-full text-2xl" />
+                </Link>
+              </li>
+
 
               <li className='hover:animate-bounce hover:underline hover:text-black'>
                 <Link href={"/"}
