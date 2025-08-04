@@ -17,7 +17,7 @@ module.exports = {
         },
       },
       animation: {
-        dropup: 'dropup 1.2s ease-in-out', 
+        dropup:'dropup 1.2s ease-in-out', 
       },
     },
   },
