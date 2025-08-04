@@ -1,19 +1,13 @@
-"use client"
-
 import { assets } from "../assets/assets";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, number } from "framer-motion";
 import ProgressBar from "@ramonak/react-progress-bar";
 import { FcAbout } from "react-icons/fc";
 
 export default function Home() {
   return (
 
-    <motion.div
-      initial={{ opacity: 0, y: 10 }}
-      animate={{ opacity: 10, y: 0 }}
-      transition={{ duration: "0.6", ease: "easeInOut" }}>
+    <>
 
       <main className="min-h-xs flex flex-col justify-center items-center bg-transparent px-10 py-10 gap-15 mb-40">
 
@@ -96,7 +90,7 @@ export default function Home() {
 
 
       </main>
-    </motion.div>
+    </>
   );
 }
 
