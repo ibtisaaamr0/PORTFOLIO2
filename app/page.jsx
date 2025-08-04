@@ -17,7 +17,7 @@ export default function Home() {
 
       <main className="min-h-xs flex flex-col justify-center items-center bg-transparent px-10 py-10 gap-15 mb-40">
 
-        <div className="rounded-full md:rounded-xl flex flex-col-reverse lg:gap-20 gap-10 md:flex-row items-center justify-between max-w-xs xs:w-[95%] sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl 2xl:max-w-4xl mt-5 shadow-2xl p-3.5 lg:p-14 md:p-6  bg-transparent md:mt-30 md:py-20 md:px-5">
+        <div className="rounded-full md:rounded-xl flex flex-col-reverse lg:gap-20 gap-10 md:flex-row items-center justify-between max-w-xs xs:w-[95%] sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl 2xl:max-w-4xl mt-5 shadow-2xl p-3.5 lg:p-14 md:p-6  bg-gray-200 md:mt-30 md:py-20 md:px-5">
 
           <div className="text-left ">
             <h1 className="text-xl md:text-2xl xl:text-4xl font-bold text-gray-900 typing-animation">Hey, I’m Ibtisam </h1>
