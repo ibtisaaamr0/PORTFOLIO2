@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen flex items-center justify-center px-6 py-70">
+    <div className="min-h-screen flex items-center justify-center px-6 py-70 animate-fade">
       <div className="flex flex-row items-center justify-between gap-10 max-w-5xl w-full">
         
         <div className="w-1/2 flex justify-center">

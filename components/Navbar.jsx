@@ -19,10 +19,11 @@ export default function Navbar() {
       <div className=' left-45 sm:left-70 text-3xl font-black italic top-1 lg:hidden  rounded-full  '>
         <h1 className='flex justify-center items-center '><Link href={"/"}
           className='cursor-pointer '>Portfolio</Link></h1></div>
-      <nav className="fixed w-full z-50 lg:bg-white lg:shadow-md px-5 py-3 flex justify-between items-center rounded-full 
-                bottom-2 lg:bottom-auto lg:top-0 animate-dropup ">
+      <nav className="fixed w-full z-50 lg:bg-gradient-to-t from-white to-gray-40 lg:shadow-md px-5 py-3 flex justify-between items-center rounded-full 
+                bottom-2 lg:bottom-auto lg:top-0 animate-dropup lg:bg-white/30 lg:backdrop-blur-md">
 
         <div><Link href={"/"}>
+
           <Image src={assets.logo}
             alt=''
             width={80}
@@ -44,7 +45,7 @@ export default function Navbar() {
             </div>
           )}
 
-          <ul className=" lg:flex lg:flex-row lg:justify-between gap-10 xl:gap-60 lg:gap-20 text-gray-800 font-medium bg-linear-to-b from-gray-300 to-gray-100 rounded-full py-4 md:px-10  shadow-lg shadow-r-xl hidden md:text-2xl md:font-bold md:max-w-4xl md:gap-5">
+          <ul className=" lg:flex lg:flex-row lg:justify-between gap-10 xl:gap-60 lg:gap-20 text-gray-800 font-medium bg-linear-to-b from-gray-300 to-gray-100 rounded-full py-4 md:px-10  shadow-lg shadow-r-xl hidden md:text-2xl md:font-bold md:max-w-4xl md:gap-5     ">
             <li>
               <Link href={"/"}>Home</Link>
             </li>
@@ -66,7 +67,9 @@ export default function Navbar() {
             height={20}
             className='cursor-pointer lg:flex rounded-full lg:w-17 hidden'
           />
+
         </Link></div>
+
       </nav>
 
 
@@ -75,7 +78,7 @@ export default function Navbar() {
       {Up &&
         (
           <div className='flex flex-col justify-center items-center lg:hidden '>
-            <ul className=" fixed flex flex-col justify-center items-center bottom-5 bg-gradient-to-t from-gray-700 to-black text-white max-w-sm rounded-4xl gap-10 text-base font-bold w-[90%] sm:max-w-md md:max-w-lg p-4 md:p-10">
+            <ul className=" animate-dropup fixed flex flex-col justify-center items-center bottom-5 bg-gradient-to-t from-gray-700 to-black text-white max-w-sm rounded-4xl gap-10 text-base font-bold w-[90%] sm:max-w-md md:max-w-lg p-4 md:p-10">
 
               <li className="w-full hidden md:flex justify-between items-center">
                 <Link href={"/"} onClick={() => setUp(false)}>

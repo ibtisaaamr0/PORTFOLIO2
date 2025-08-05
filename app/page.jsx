@@ -11,9 +11,10 @@ export default function Home() {
 
     <>
 
-      <main className="min-h-xs flex flex-col justify-center items-center bg-transparent px-10 py-10 gap-15 mb-40">
+      <main className="min-h-xs flex flex-col justify-center items-center bg-transparent px-10 py-10 gap-15 mb-40 animate-fade">
+        
 
-        <div className="rounded-full md:rounded-xl flex flex-col-reverse lg:gap-20 gap-10 md:flex-row items-center justify-between max-w-xs xs:w-[95%] sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl 2xl:max-w-4xl mt-5 shadow-2xl p-3.5 lg:p-14 md:p-6  bg-gray-200 md:mt-30 md:py-20 md:px-5">
+        <div className="rounded-full bg-gray-300 md:rounded-xl flex flex-col-reverse lg:gap-20 gap-10 md:flex-row items-center justify-between max-w-xs xs:w-[95%] sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl 2xl:max-w-4xl mt-5 shadow-2xl p-3.5 lg:p-14 md:p-6   md:mt-30 md:py-20 md:px-5">
 
           <div className="text-left ">
             <h1 className="text-xl md:text-2xl xl:text-4xl font-bold text-gray-900 typing-animation">Hey, I’m Ibtisam </h1>
@@ -37,8 +38,8 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="rounded-full md:rounded-xl flex flex-col-reverse gap-5 lg:flex-col-reverse items-center justify-between max-w-xs xs:w-[95%] sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl 2xl:max-w-4xl mt-5 shadow-2xl p-5 xl:p-15 bg-transparent md:mt-30">
-          <div className="text-left flex flex-col  gap-5 ">
+        <div className="rounded-full md:rounded-xl flex flex-col-reverse gap-5 lg:flex-col-reverse items-center justify-between max-w-xs xs:w-[95%] sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl 2xl:max-w-4xl mt-5 shadow-2xl p-5 xl:p-15 bg-gray-300 md:mt-30">
+          <div className="text-left flex flex-col p-5 gap-5 ">
             <h1 className="text-xl font-extrabold text-gray-900 text-left">Skills</h1>
             <ul className=" flex flex-col gap-2 font-bold italic list-disc ">
               <li className="w-full sm:w-[300px] md:w-[400px] lg:w-[500px]">
@@ -78,7 +79,7 @@ export default function Home() {
 
 
           <div className=" md:text-left flex flex-col justify-center items-center gap-5 max-w-xs xs:w-[95%] sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl 2xl:max-w-4xl ">
-            <h1 className="text-base sm:text-xl md:text-4xl font-bold text-gray-900 flex gap-5">About Me <FcAbout /></h1>
+            <h1 className="text-xl sm:text-xl md:text-4xl font-bold text-gray-900 flex gap-5">About Me <FcAbout /></h1>
             <p className="mt-4 text-base sm:text-2xl text-gray-600 text-justify">
               I’m a passionate developer with a strong interest in building modern web applications using the latest technologies. I love turning ideas into reality with code.
             </p>

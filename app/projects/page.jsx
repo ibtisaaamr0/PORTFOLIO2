@@ -5,9 +5,9 @@ import Image from 'next/image';
 
 export default function Projects() {
   return (
-    <div className="flex flex-col gap-20 items-center justify-center px-10 py-20  bg-transparent pb-50 md:mt-10">
-      <div className="flex flex-col-reverse md:flex-row justify-between items-center gap-10 w-full max-w-screen-2xl shadow-lg p-5 bg-linear-to-t from-gray-300 to-gray-600">
-        <div className="lg:w-[40%] w-full text-left space-y-6">
+    <div className="flex flex-col gap-20 items-center justify-center px-10 py-20  bg-transparent pb-50  md:mt-10 animate-fade">
+      <div className="hover:animate-hover-on flex flex-col-reverse md:flex-row justify-between items-center gap-10 w-full max-w-screen-2xl shadow-lg p-5 bg-linear-to-t from-gray-100 to-gray-400">
+        <div className="lg:w-[40%] w-full text-left space-y-6 ">
         <Fa1
           className=' text-7xl' />
 
@@ -41,7 +41,7 @@ export default function Projects() {
       </div>
 
 
-      <div className="flex flex-col-reverse md:flex-row justify-between items-center gap-10 w-full max-w-screen-2xl shadow-lg p-5 bg-linear-to-t from-gray-300 to-gray-600">
+      <div className="hover:animate-hover-on flex flex-col-reverse md:flex-row justify-between items-center gap-10 w-full max-w-screen-2xl shadow-lg p-5 bg-linear-to-t from-gray-100 to-gray-400">
 
         <div className="lg:w-[70%] w-full text-left space-y-6">
           <Fa2
