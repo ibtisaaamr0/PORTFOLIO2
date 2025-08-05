@@ -1,17 +1,9 @@
-'use client';
-
-import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default function AboutPage() {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.78, ease: 'easeOut' }}
-      className="min-h-screen flex items-center justify-center px-6 py-70"
-    >
+    <div className="min-h-screen flex items-center justify-center px-6 py-70">
       <div className="flex flex-row items-center justify-between gap-10 max-w-5xl w-full">
         
         <div className="w-1/2 flex justify-center">
@@ -35,6 +27,6 @@ export default function AboutPage() {
         </div>
 
       </div>
-    </motion.div>
+    </div>
   );
 }

@@ -1,53 +1,45 @@
-'use client'; // if using App Router
+'use client'; 
 
 import { useState } from 'react';
-import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 export default function ContactForm() {
-  const [formData, setFormData] = useState({
+  const [Data, setData] = useState({
     name: '',
     email: '',
     message: ''
   });
-  const [status, setStatus] = useState('');
 
-  const handleChange = (e) => {
-    setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
-  };
+
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000'}/api/contact`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      });
+  try {
+    const res = await fetch("http://localhost:5000/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(Data) 
+    });
+
+    const data = await res.json();
+    console.log("Response:", data);
+    alert("Message sent successfully!");
+
+    setData({ name: '', email: '', message: '' });
+  } catch (error) {
+    console.error("Error submitting form:", error);
+    alert("Failed to send message.");
+  }
+};
 
 
-      const data = await res.json();
-      if (data.success) {
-        setStatus('Message sent successfully!');
-        setFormData({ name: '', email: '', message: '' });
-      } else {
-        setStatus('Something went wrong.');
-      }
-    } catch (error) {
-      console.error(error);
-      setStatus('Server error.');
-    }
-  };
 
 
   return (
-    <motion.div
-      initial={{ opacity: 1, y: 30 }}
-      animate={{ opacity: 10, y: 0 }}
-      transition={{ duration: 0.78, ease: 'easeIn' }}
-      className="min-h-screen flex justify-center m-20"
-    >
+    <div className="min-h-screen flex justify-center m-20">
       <div className='flex flex-col gap-20 justify-center items-center md:flex md:flex-row md:text-3xl'>
         <div className="flex flex-col md:flex-row items-center justify-between gap-10  w-full  ">
 
@@ -109,21 +101,21 @@ export default function ContactForm() {
             <label >Name</label>
             <input type="text"
               name="name"
-              value={formData.name}
-              onChange={handleChange}
+              value={Data.name}
+              onChange={(e)=>{setData({name:e.target.value , email:Data.email , message:Data.message})}}
               placeholder="Your Name"
               required className='bg-gray-200 text-black border-2  rounded-full' />
             <label >Email</label>
             <input type="email"
               name="email"
-              value={formData.email}
-              onChange={handleChange}
+              value={Data.email}
+              onChange={(e)=>{setData({name:Data.name , email:e.target.value, message:Data.message})}}
               placeholder="Your Email"
               required className='bg-gray-200 text-black border-2 rounded-full' />
             <label >Your Message</label>
             <input name="message"
-              value={formData.message}
-              onChange={handleChange}
+              value={Data.message}
+              onChange={(e)=>{setData({name:Data.name, email:Data.email,message:e.target.value})}}
               placeholder="Your Message"
               required className='bg-gray-200 text-black border-2 rounded-full ' />
             <button type='submit' className='cursor-pointer bg-black  text-white rounded-full w-full '> Submit</button>
@@ -132,6 +124,6 @@ export default function ContactForm() {
 
       </div>
 
-    </motion.div>
+    </div>
   );
 }

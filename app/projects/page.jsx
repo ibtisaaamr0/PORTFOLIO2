@@ -5,12 +5,7 @@ import Image from 'next/image';
 
 export default function Projects() {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.78, ease: 'easeInOut' }}
-      className="flex flex-col gap-20 items-center justify-center px-10 py-20  bg-transparent pb-50 md:mt-10"
-    >
+    <div className="flex flex-col gap-20 items-center justify-center px-10 py-20  bg-transparent pb-50 md:mt-10">
       <div className="flex flex-col-reverse md:flex-row justify-between items-center gap-10 w-full max-w-screen-2xl shadow-lg p-5 bg-linear-to-t from-gray-300 to-gray-600">
         <div className="lg:w-[40%] w-full text-left space-y-6">
         <Fa1
@@ -70,6 +65,6 @@ export default function Projects() {
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
