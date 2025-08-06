@@ -1,10 +1,9 @@
-"use client"
 
 import { assets } from "../assets/assets";
 import Image from "next/image";
 import Link from "next/link";
-import ProgressBar from "@ramonak/react-progress-bar";
 import { FcAbout } from "react-icons/fc";
+import Skill from "@/components/Skill";
 
 export default function Home() {
   return (
@@ -31,48 +30,23 @@ export default function Home() {
             <Image
               src={assets.user_image}
               alt="Profile"
-              width={300}
-              height={300}
-              className="rounded-full shadow-lg object-cover w-full xs:w-[95%] sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl 2xl:max-w-4xl"
+              width={600}
+              height={600}
+              priority
+              className="rounded-full shadow-lg  w-full xs:w-[95%] sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl 2xl:max-w-4xl"
             />
           </div>
         </div>
 
         <div className="rounded-full md:rounded-xl flex flex-col-reverse gap-5 lg:flex-col-reverse items-center justify-between max-w-xs xs:w-[95%] sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl 2xl:max-w-4xl mt-5 shadow-2xl p-5 xl:p-15 bg-gray-300 md:mt-30">
-          <div className="text-left flex flex-col p-5 gap-5 ">
-            <h1 className="text-xl font-extrabold text-gray-900 text-left">Skills</h1>
-            <ul className=" flex flex-col gap-2 font-bold italic list-disc ">
-              <li className="w-full sm:w-[300px] md:w-[400px] lg:w-[500px]">
-                Next.jss
-                <ProgressBar completed={55} bgColor="black" width="100%"  baseBgColor="white" height="12px" animateOnRender={true} className="border-2 rounded-3xl "  />
-              </li>
-              <li className="w-full sm:w-[300px] md:w-[400px] lg:w-[500px]">
-                Python
-                <ProgressBar completed={67} bgColor="black" width="100%" baseBgColor="white" height="12px" animateOnRender={true} className="border-2 rounded-3xl" />
-              </li>
-              <li className="w-full sm:w-[300px] md:w-[400px] lg:w-[500px]">
-                C++
-                <ProgressBar completed={80} bgColor="black" width="100%" baseBgColor="white" height="12px" animateOnRender={true} className="border-2 rounded-3xl" />
-
-              </li>
-              <li className="w-full sm:w-[300px] md:w-[400px] lg:w-[500px]">
-                Taikwind CSS/CSS
-                <ProgressBar completed={75} bgColor="black" width="100%" baseBgColor="white" height="12px" animateOnRender={true} className="border-2 rounded-3xl" />
-
-              </li>
-              <li className="w-full sm:w-[300px] md:w-[400px] lg:w-[500px]">
-                InDesign
-                <ProgressBar completed={30} bgColor="black" width="100%" baseBgColor="white" height="12px" animateOnRender={true} className="border-2 rounded-3xl" />
-
-              </li>
-            </ul>
-          </div>
+          <Skill/>
             <div>
             <Image
               src={"/work-4.png"}
               alt=""
               width={300}
               height={300}
+              priority
               className="rounded-full shadow-lg h-full object-cover xs:w-[95%] sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl 2xl:max-w-4xl" />
           </div>
         </div>
