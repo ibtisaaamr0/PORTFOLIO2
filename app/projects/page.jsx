@@ -1,6 +1,4 @@
-'use client';
 import { Fa1, Fa2 } from "react-icons/fa6";
-import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 export default function Projects() {
